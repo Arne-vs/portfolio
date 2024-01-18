@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="styles/reset.css" type="text/css" rel="stylesheet">
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+
+    <script defer src="scripts/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all links with the 'scroll' class
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        // Smooth scroll function with offset
+        function smoothScroll(target) {
+          const offset = document.querySelector('.nav').offsetHeight; // Adjust this if needed
+          const targetElement = document.querySelector(target);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - offset,
+              behavior: 'smooth',
+            });
+          }
+        }
+
+        // Attach click event listener to each link
+        links.forEach((link) => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            smoothScroll(targetId);
+          });
+        });
+      });
+
+      
+    </script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="logo"><a href="#BackTop"><img src="images/Asset 3.png" alt=""></a></div>
+        
+        <ul>
+          <li><a href="#bio">Wie ben ik?</a></li>
+          <li><a href="#mywork">Mijn werken</a></li>
+        </ul>
+       
+      </div>
+      <img class="hamburger-menu" src="images/menu.png" alt="">
+    </nav>
+    <header id="BackTop">
+      <div class="header-title">
+      <h1>Arne van Schalkwijk</h1>
+      <h2>front-end developer & UX/UI designer</h2>
+      </div>
+      <div class="header_foto">
+        <img src="images/mockupInhand.png" alt="">
+      </div>
+    </header>
+
+    <section id="bio">
+      <div class="bio_foto">
+        <img src="images/Arne.jpeg" alt="">
+      </div>
+      <div>
+        <h1>Wie ben ik?</h1>
+        <p>
+          De designer is Arne van Schalkwijk, Student grafische digitale media met als specialisatie interface design. Hij streeft ernaar telkens zijn grenzen te verleggen. Zijn focus is vooral op UX/UI design. Daarnaast heeft hij ook een grote passie voor front-end development. 
+        </p>
+        <div class="buttons">
+          <div class="row">
+             <a class="instagram" href="https://www.instagram.com/arnevs_designs/" target="_blank">
+             <span><i class="fab fa-instagram"></i></span>
+             Instagram</a>
+          </div>
+          <div class="row">
+            <a class="instagram" href="https://github.com/Arne-vs" target="_blank">
+              <span><i class="fab fa-github"></i></span>
+            Github</a>
+         </div>
+       </div>
+      </div>
+
+    </section>
+
+
+    <section id="mywork">
+      <h1>Mijn projecten</h1>
+    <div class="works">
+      <div>
+        <a href="https://trainsurfers.netlify.app/">
+        <div id="trainsurfers"></div>
+        <h2>Train Surfers</h2>
+      </a>
+      </div>
+
+      <div>
+        <a href="https://trainsurfers.netlify.app/">
+          <div id="strava"></div>
+        <h2>Strava redesign</h2>
+      </a>
+      </div>
+
+      <div>
+        <a href="https://trainsurfers.netlify.app/">
+          <div id="verlorentijd"></div>
+        <h2>Verloren tijd</h2>
+      </a>
+      </div>
+
+      <div>
+        <a href="https://trainsurfers.netlify.app/">
+          <div id="journeyofemotions"></div>
+        <h2>Journey of emotions</h2>
+      </a>
+      </div>
+
+      <div>
+        <a href="https://trainsurfers.netlify.app/">
+          <div id="socialjourney"></div>
+        <h2>My social journey</h2>
+      </a>
+      </div>
+
+      <div>
+        <a href="https://trainsurfers.netlify.app/">
+          <div id="reedham"></div>
+        <h2>Your journey to Reedham</h2>
+      </a>
+      </div>
+    </div>
+  </section>
+    
+
+  </body>
+</html>
